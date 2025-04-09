@@ -1,20 +1,4 @@
 :root {
-    --action-primary: rgba(37, 218, 197, 1);
-    --action-secondary: rgba(72, 43, 231, 1);
-    --action-third: rgba(233, 58, 125, 1);
-    --colors-heading: rgba(30, 14, 98, 1);
-    --colors-text: rgba(21, 20, 57, 0.4);
-    --colors-white: rgba(255, 255, 255, 1);
-    --colors-grey: rgba(235, 234, 237, 1);
-    --background-dark: rgba(47, 24, 147, 1);
-    --background-light: rgba(255, 255, 255, 1);
-    --socials-facebook: rgba(66, 103, 178, 1);
-    --socials-youtube: rgba(234, 50, 35, 1);
-    --socials-twitter: rgba(29, 161, 242, 1);
-    --socials-pinterest: rgba(200, 35, 44, 1);
-    --socials-snapchat: rgba(255, 252, 0, 1);
-    --socials-linkedin: rgba(0, 119, 181, 1);
-    --socials-dribbble: rgba(233, 76, 136, 1);
     --font-awesome-font-family: "FontAwesome", Helvetica;
     --font-awesome-font-weight: 400;
     --font-awesome-font-size: 18px;
@@ -93,22 +77,6 @@
     --buttons-middle-letter-spacing: 0px;
     --buttons-middle-line-height: 26px;
     --buttons-middle-font-style: normal;
-    --action-primary: rgba(37, 218, 197, 1);
-    --action-secondary: rgba(72, 43, 231, 1);
-    --action-third: rgba(233, 58, 125, 1);
-    --colors-heading: rgba(30, 14, 98, 1);
-    --colors-text: rgba(21, 20, 57, 0.4);
-    --colors-white: rgba(255, 255, 255, 1);
-    --colors-grey: rgba(235, 234, 237, 1);
-    --background-dark: rgba(47, 24, 147, 1);
-    --background-light: rgba(255, 255, 255, 1);
-    --socials-facebook: rgba(66, 103, 178, 1);
-    --socials-youtube: rgba(234, 50, 35, 1);
-    --socials-twitter: rgba(29, 161, 242, 1);
-    --socials-pinterest: rgba(200, 35, 44, 1);
-    --socials-snapchat: rgba(255, 252, 0, 1);
-    --socials-linkedin: rgba(0, 119, 181, 1);
-    --socials-dribbble: rgba(233, 76, 136, 1);
     --font-awesome-font-family: "FontAwesome", Helvetica;
     --font-awesome-font-weight: 400;
     --font-awesome-font-size: 18px;
@@ -187,22 +155,6 @@
     --buttons-middle-letter-spacing: 0px;
     --buttons-middle-line-height: 26px;
     --buttons-middle-font-style: normal;
-    --action-primary: rgba(37, 218, 197, 1);
-    --action-secondary: rgba(72, 43, 231, 1);
-    --action-third: rgba(233, 58, 125, 1);
-    --colors-heading: rgba(30, 14, 98, 1);
-    --colors-text: rgba(21, 20, 57, 0.4);
-    --colors-white: rgba(255, 255, 255, 1);
-    --colors-grey: rgba(235, 234, 237, 1);
-    --background-dark: rgba(47, 24, 147, 1);
-    --background-light: rgba(255, 255, 255, 1);
-    --socials-facebook: rgba(66, 103, 178, 1);
-    --socials-youtube: rgba(234, 50, 35, 1);
-    --socials-twitter: rgba(29, 161, 242, 1);
-    --socials-pinterest: rgba(200, 35, 44, 1);
-    --socials-snapchat: rgba(255, 252, 0, 1);
-    --socials-linkedin: rgba(0, 119, 181, 1);
-    --socials-dribbble: rgba(233, 76, 136, 1);
     --font-awesome-font-family: "FontAwesome", Helvetica;
     --font-awesome-font-weight: 400;
     --font-awesome-font-size: 18px;
@@ -289,6 +241,42 @@
     box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+    .navegacao .div {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .navegacao .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-hero {
+        margin-top: 30px;
+        /* ou padding-top: 100px, se necessário */
+    }
+
+    .sobre-nos {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-nos .imagem-sobre {
+        margin: 0 auto 20px;
+    }
+
+    .lista-cuidados li {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .contato-page .forma-contato {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 
 
 body {
@@ -313,107 +301,29 @@ body {
     /* Espaçamento lateral */
 }
 
-
-.navegacao .home {
+.navbar a {
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--text-paragraph-font-family);
     font-weight: var(--text-paragraph-font-weight);
-    color: var(--colors-white);
+    color: #fff;
     font-size: var(--text-paragraph-font-size);
     letter-spacing: var(--text-paragraph-letter-spacing);
     line-height: var(--text-paragraph-line-height);
     white-space: nowrap;
     font-style: var(--text-paragraph-font-style);
     padding-bottom: 0.5px;
-    /* Espaço entre o texto e a linha */
     border-bottom: 1px solid transparent;
-    /* Linha invisível inicialmente */
-    transition: #FFF00E 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
     text-decoration: none;
 }
 
-.navegacao .home:hover {
+.navbar a:hover {
     color: #FFF00E;
     border-bottom: 0.5px solid #FFF00E;
 }
 
-.navegacao .sobre {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--text-paragraph-font-family);
-    font-weight: var(--text-paragraph-font-weight);
-    color: var(--colors-white);
-    font-size: var(--text-paragraph-font-size);
-    letter-spacing: var(--text-paragraph-letter-spacing);
-    line-height: var(--text-paragraph-line-height);
-    white-space: nowrap;
-    font-style: var(--text-paragraph-font-style);
-    padding-bottom: 0.5px;
-    /* Espaço entre o texto e a linha */
-    border-bottom: 1px solid transparent;
-    /* Linha invisível inicialmente */
-    transition: #FFF00E 0.3s ease;
-    text-decoration: none;
-}
-
-.navegacao .sobre:hover {
-    color: #FFF00E;
-    border-bottom: 0.5px solid #FFF00E;
-}
-
-.navegacao .cuidados {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--text-paragraph-font-family);
-    font-weight: var(--text-paragraph-font-weight);
-    color: var(--colors-white);
-    font-size: var(--text-paragraph-font-size);
-    letter-spacing: var(--text-paragraph-letter-spacing);
-    line-height: var(--text-paragraph-line-height);
-    white-space: nowrap;
-    font-style: var(--text-paragraph-font-style);
-    padding-bottom: 0.5px;
-    /* Espaço entre o texto e a linha */
-    border-bottom: 1px solid transparent;
-    /* Linha invisível inicialmente */
-    transition: #FFF00E 0.3s ease;
-    text-decoration: none;
-}
-
-.navegacao .cuidados:hover {
-    color: #FFF00E;
-    border-bottom: 0.5px solid #FFF00E;
-}
-
-.navegacao .contato {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--text-paragraph-font-family);
-    font-weight: var(--text-paragraph-font-weight);
-    color: var(--colors-white);
-    font-size: var(--text-paragraph-font-size);
-    letter-spacing: var(--text-paragraph-letter-spacing);
-    line-height: var(--text-paragraph-line-height);
-    white-space: nowrap;
-    font-style: var(--text-paragraph-font-style);
-    padding-bottom: 0.5px;
-    /* Espaço entre o texto e a linha */
-    border-bottom: 1px solid transparent;
-    /* Linha invisível inicialmente */
-    transition: #FFF00E 0.3s ease;
-    text-decoration: none;
-}
-
-
-.navegacao .contato:hover {
-    color: #FFF00E;
-    border-bottom: 0.5px solid #FFF00E;
-}
 
 .navegacao .logo {
     display: flex;
@@ -442,6 +352,8 @@ body {
     align-items: center;
     height: 750px;
     width: 100%;
+    padding-top: 450px;
+    /* ajusta conforme a altura do seu menu */
 }
 
 .header-hero .div {
@@ -462,7 +374,7 @@ body {
 .header-hero .apresentacao {
     font-family: var(--heading-h5-lead-font-family);
     font-weight: var(--heading-h5-lead-font-weight);
-    color: var(--colors-white);
+    color: #fff;
     font-size: var(--heading-h5-lead-font-size);
     text-align: center;
     letter-spacing: var(--heading-h5-lead-letter-spacing);
@@ -471,8 +383,9 @@ body {
     max-width: 839px;
 }
 
-.header-hero .currasq {
-    max-width: 300px;
+.header-hero .churrasq {
+    max-width: 400px;
+    width: 100%;
     height: auto;
     margin: 20px 0;
 }
@@ -480,7 +393,7 @@ body {
 .header-hero .sub-apresentacao {
     font-family: var(--heading-h2-header-font-family);
     font-weight: var(--heading-h2-header-font-weight);
-    color: var(--colors-white);
+    color: #fff;
     font-size: var(--heading-h2-header-font-size);
     letter-spacing: var(--heading-h2-header-letter-spacing);
     line-height: var(--heading-h2-header-line-height);
@@ -488,35 +401,6 @@ body {
     text-align: center;
     margin-top: 20px;
     max-width: 839px;
-}
-
-.header-hero .btn-saiba {
-    background-color: #FFF00E;
-    border-radius: 100px;
-    font-family: var(--buttons-middle-font-family);
-    font-weight: var(--buttons-middle-font-weight);
-    color: #000;
-    font-size: var(--buttons-middle-font-size);
-    text-align: center;
-    letter-spacing: var(--buttons-middle-letter-spacing);
-    line-height: var(--buttons-middle-line-height);
-    white-space: nowrap;
-    font-style: var(--buttons-middle-font-style);
-    padding: 15px 30px;
-    margin-top: 30px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #e0d10c;
-}
-
-.header-hero .currasq {
-    max-width: 300px;
-    height: auto;
-    margin: 20px 0;
 }
 
 .header-hero button {
@@ -527,10 +411,6 @@ button:hover {
     background-color: #FFF00E;
     border-radius: 100px;
     transition: #d1c302 0.6s ease;
-}
-
-button:hover {
-    background-color: #e0d10c;
 }
 
 .header-hero .header-menu {
@@ -557,7 +437,7 @@ button:hover {
     left: 2px;
     font-family: "DM Sans", Helvetica;
     font-weight: 700;
-    color: var(--colors-white);
+    color: #fff;
     font-size: 24px;
     text-align: center;
     letter-spacing: -0.29px;
@@ -591,7 +471,7 @@ button:hover {
     max-width: 200px;
     /* Mantém o tamanho fixo dos quadrados */
     font-family: var(--text-paragraph-font-family);
-    color: var(--colors-white);
+    color: #fff;
     height: 250px;
     border: 1px solid #FFF00E;
     border-radius: 10px;
@@ -659,14 +539,14 @@ button:hover {
     font-family: "DM Sans", Helvetica;
     font-weight: 700;
     font-size: 24px;
-    color: var(--colors-white);
+    color: #fff;
 }
 
 .sobre-nos .paragrafo-sobre {
     left: 0;
     font-family: var(--text-paragraph-font-family);
     font-weight: var(--text-paragraph-font-weight);
-    color: var(--colors-white);
+    color: #fff;
     font-size: var(--text-paragraph-font-size);
     letter-spacing: var(--text-paragraph-letter-spacing);
     line-height: var(--text-paragraph-line-height);
@@ -707,7 +587,7 @@ button:hover {
     flex: 1 1 calc(25% - 20px);
     /* Garante 4 itens por linha */
     font-family: var(--text-paragraph-font-family);
-    color: var(--colors-white);
+    color: #fff;
     padding: 20px;
     text-align: center;
     display: flex;
