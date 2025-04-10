@@ -352,8 +352,9 @@ body {
     align-items: center;
     height: 750px;
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 200px;
+    padding-top: 370px;
+    /* ajusta conforme a altura do seu menu */
+    padding-bottom: 00px;
 }
 
 .header-hero .div {
